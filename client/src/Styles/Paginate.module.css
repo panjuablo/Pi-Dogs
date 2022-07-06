@@ -1,0 +1,25 @@
+.paginate{
+    display: flex;
+    width: 825px;
+    height: 55px;
+    background: transparent;
+    padding: 0.5px;
+    margin-left: 360px;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 40px;
+}
+
+.paginate ul{
+    margin-right: 0px;
+    
+}
+
+.paginate button{
+    height: 30px;
+    width: 30px;
+    margin-left: 2px;
+    margin-right: 2px;
+    border-color: rgba(255, 255, 255);
+    border-radius: 50%;
+
+}

@@ -5,13 +5,13 @@ const dogsId = async(id) => {
     if(
         id.match(/^[a-f0-9]{8}-?[a-f0-9]{4}-?4[a-f0-9]{3}-?[89ab][a-f0-9]{3}-?[a-f0-9]{12}$/i) //regular expression para validar UUID
     ){ try {
-        let dogDb = await Dog.findAll({
-            where: {id},
-            include: [
+        let dogDb = await Dog.findByPk(
+            id,
+            {include: [
                 {model: Temperaments, attributes: ['name'], through: { attributes: []}}
-            ],
-        })
-        return dogDb[0];
+            ],}
+        )
+        return dogDb;
 
     } catch(error){
         console.log(error)

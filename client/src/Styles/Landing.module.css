@@ -1,0 +1,51 @@
+.back{
+    background-image: url('https://i.pinimg.com/originals/fc/a9/57/fca957a527c307776ad36f95c2b3c24d.jpg'); 
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position:fixed; 
+}
+
+.button{
+    margin-block-start: 240px;
+    --glow-color: rgb(250, 232, 214);
+    --glow-spread-color: rgba(244, 152, 54, 0.781);
+    --enhanced-glow-color: rgb(250, 199, 144);
+    --btn-color: rgb(252, 174, 90);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    transition: all 0.3s;
+}
+   
+button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+}
+
+.title {
+    margin-block-start: 130px;
+    text-shadow: rgb(0, 0, 0) 0px 4px 5px;
+    color: rgba(252, 98, 42, 0.979);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+}
+
+.card {
+    border-radius: 20px;
+    margin-left: 350px;
+    width: 800px;
+    height: 200px;
+   }

@@ -14,7 +14,7 @@ const dogsName = async(name) => {
             },
         })
 
-        const allDogs = infoDb? [...infoDb, ...infoName] : [...infoName];
+        const allDogs = infoDb ? [...infoDb, ...infoName] : [...infoName];
 
         const dogsMap = allDogs.map((e) => {
             return {
@@ -23,7 +23,7 @@ const dogsName = async(name) => {
                 weight: e.weight.metric !== undefined? e.weight.metric : 'Not found!',
                 height: e.height.metric !== undefined? e.height.metric : 'Not found!',
                 life_span: e.life_span !== undefined? e.life_span : 'Not found!',
-                image: e.reference_image_id !== undefined? e.reference_image_id : 'Image not found!',
+                image: `https://cdn2.thedogapi.com/images/${e.reference_image_id}.jpg`,
                 temperaments: e.temperament !==undefined? e.temperament.split(', '): 'The dog havent got a temperament',
                 origin: e.origin !== undefined? e.origin : 'Not found!'
             }
@@ -31,7 +31,7 @@ const dogsName = async(name) => {
 
         return dogsMap;
     } catch(error) {
-        console.log(error)
+        res.send(error)
     }
 };
 

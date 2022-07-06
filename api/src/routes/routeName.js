@@ -5,18 +5,18 @@ const { dogsName } = require('../Controls/controlName');
 const {  dogsId } = require('../Controls/controlId');
 
 
-route.get('/', async(req,res,next) => {
+route.get('/', async(req,res) => {
     const name = req.query.name;
-    try {
-        if(name){
+    if(!name){
+        const allApi = await dogsAll();
+        res.status(200).send(allApi);
+    }else {
+        try {
             let allDogs = await dogsName(name);
-            allDogs? res.status(200).send(allDogs) : res.status(404).send('The name does not exist!!!');
-        } else {
-            const allApi = await dogsAll();
-            res.status(200).send(allApi);
-        };
-    } catch(error) {
-        next(error)
+            allDogs.length ? res.status(200).send(allDogs) : res.status(404).send('The name does not exist!!!');
+        }catch(error) {
+            res.send(error)
+        }
     }
 });
 

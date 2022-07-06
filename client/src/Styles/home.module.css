@@ -1,0 +1,40 @@
+.back{
+    background-image: url("https://cdn.wallpapersafari.com/61/16/0Z5rqn.jpg"); 
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+    background-attachment: fixed;
+    overflow: scroll;
+}
+
+.title {
+    margin-block-start: 80px;
+    text-shadow: rgb(0, 0, 0) 0px 4px 5px;
+    color: rgba(252, 98, 42, 0.979);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+}
+
+.button{
+    padding: 1.3em 3em;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    background-color: rgb(255,255,255,0.3);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+      
+.button:hover {
+    background-color: rgba(239, 125, 32, 0.881);
+    box-shadow: 0px 15px 20px rgba(239, 125, 32, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
