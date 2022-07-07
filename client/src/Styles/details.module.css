@@ -1,37 +1,41 @@
+.fondo{
+    background-image: url('https://images.hdqwalls.com/wallpapers/dog-running-bridge-5k-bx.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+}
+
 .card{
     margin-block-end: 70px;
-    margin: 120px 20px 20px 20px;
-    width: 330px;
-    height: 240px;
-    background: #f5f5f53f;
+    margin: 30px 180px 20px 480px;
+    width: 600px;
+    height: 500px;
+    background: #f5f5f57b;  
     border-radius: 20px;
     display: flexbox; 
 }
    
-.card h5{
-    color: rgba(239, 125, 32, 0.881);
-    margin: 0px 2px 15px 2px;
-    text-shadow: rgba(0, 0, 0, 0.772) 0px 4px 4px;
-}
-
-.card h3{
+.card h2{
     color: rgba(252, 98, 42, 0.979);
-    text-shadow: rgba(0, 0, 0, 0.772) 0px 4px 4px;
-    margin-block-start: -90px;
+    margin: -10px 2px 15px 2px;
+    text-shadow: rgba(0, 0, 0, 0.877) 0px 4px 4px;
 }
    
 .card img{
-    --size: 140px;
+    margin: 0px 0px -60px 0px;
+    --size: 300px;
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
-    transform: translateY(-70%);
+    transform: translateY(-40%);
     position: relative;
 }
    
 
    
-.button{
+.button1{
+    margin: 40px 1200px 50px 5px;
     padding: 1.3em 3em;
     font-size: 10px;
     text-transform: uppercase;
@@ -43,8 +47,8 @@
     transition: all 0.3s ease 0s;
     cursor: pointer;
 }
-
-.button:hover {
+      
+.button1:hover {
     background-color: rgba(239, 125, 32, 0.881);
     box-shadow: 0px 15px 20px rgba(239, 125, 32, 0.4);
     color: #fff;

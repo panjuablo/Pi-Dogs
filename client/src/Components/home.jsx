@@ -38,6 +38,7 @@ export default function Home(){
             <NavBar setOrder={setOrder} setPag={setPag}/>
             <Paginated 
             dogPag={dogPag} allDogs={allDogs.length} page={page}/>
+            <div  className={styleImage.cards}>
             {allDogs.length === 0 ? 'loading' // <p>(<Loading setLoading={setLoading}/>)</p>
             : currentDog?.map(e => {
                 return(
@@ -51,6 +52,7 @@ export default function Home(){
                         />
                     </div>)
             })}
+            </div>
         </div>
     )
 }

@@ -1,0 +1,94 @@
+.back{
+    background-image: url("https://images.hdqwalls.com/wallpapers/bulldog-puppy-4k-xn.jpg"); 
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position:fixed; 
+}
+
+.button1{
+    margin: 40px 1200px 50px 5px;
+    padding: 1.3em 3em;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    background-color: rgb(255,255,255,0.3);
+    border: none;
+    border-radius: 45px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+      
+.button1:hover {
+    background-color: rgba(239, 125, 32, 0.881);
+    box-shadow: 0px 15px 20px rgba(239, 125, 32, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.title {
+    margin: -50px 50px 60px 50px;
+    text-shadow: rgb(0, 0, 0) 0px 4px 5px;
+    color: rgba(252, 98, 42, 0.979);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 100px;
+}
+.button2{
+    color: rgba(252, 98, 42, 0.979);
+    margin: 60px 100px 50px 5px;
+    padding: 1.3em 3em;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    background-color: rgb(255,255,255,0.3);
+    border: none;
+    border-radius: 45px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+      
+.button2:hover {
+    background-color: rgba(239, 125, 32, 0.881);
+    box-shadow: 0px 15px 20px rgba(239, 125, 32, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.form label{
+    color: orangered;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 5px 5px 5px 5px;
+}
+
+.form input{
+    font-style: italic;
+    border-radius: 10px;
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.854);
+}
+
+.temps{
+    border-radius: 10px;
+    margin: -350px -700px 5px 5px;
+}
+
+.temps li{
+    margin: 10px 5px 5px 940px;
+    list-style: disc;
+    width: 200px;
+    height: 20px;
+    background-color: rgba(255,255,255,0.3);
+    align-items: center;
+    border-radius: 20px;
+}
+
+.temps button{
+    margin: 10px 5px 5px 190px;
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+    border-color: red;    
+}

@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getId, setDetails } from "../Act-Red/action";
 import Loading from './Loading';
+import style from '../Styles/details.module.css';
 
 export default function Details(){
     const { id } = useParams();
@@ -17,16 +18,16 @@ export default function Details(){
 
     
     return(
-        <div>
-            <Link to='/dogs'>
-                <button>← Back</button>
-            </Link>
+        <div className={style.fondo}>
+            <button className={style.button1}>
+                <Link to='/dogs' style={{color:"white"}}>← Back</Link>
+            </button>
             {console.log(theDog)}
             { theDog.length !== 0 ?
-            <div>
-                <h2>Name: {theDog['name']}</h2>
+            <div className={style.card}>
                 <img src={theDog['createdInDb'] === true ? theDog['image'] 
                 : `https://cdn2.thedogapi.com/images/${theDog['image']}.jpg`} alt='Img not found' width='30%' height='350px'/>
+                <h2>Name: {theDog['name']}</h2>
                 <h2>Temperaments: {theDog['createdInDb'] === true ? theDog['temperaments'].map(e => e.name + ', ') 
                 : theDog['temperaments']}</h2>
                 <h2>Weight: {theDog['weight']} Kg.</h2>

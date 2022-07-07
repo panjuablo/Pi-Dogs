@@ -2,6 +2,7 @@ import { React, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { getTemp, postDog } from '../Act-Red/action';
+import style from '../Styles/form.module.css';
 
 function validate(input){
     let errors = {};
@@ -100,12 +101,12 @@ export default function DogForm({}){
     },[]);
 
     return(
-        <div>
-            <Link to='/dogs'>
-                <button>← Back</button>
-            </Link>
-            <h1>My puppy</h1>
-            <form>
+        <div className={style.back}>
+            <button className={style.button1} >
+                <Link to='/dogs' style={{color:"white"}}>← Back</Link>
+            </button>
+            <h1 className={style.title}>My puppy</h1>
+            <form className={style.form}>
                 <div>
                     <label>Name:</label>
                     <input type='text' value={input.name} name='name' onChange={(e) => handleChange(e)}/>
@@ -122,11 +123,6 @@ export default function DogForm({}){
                     {errors.height && (<p className='error'>{errors.height}</p>)}
                 </div>
                 <div>
-                    <label>Life span:</label>
-                    <input type='number' min='1' max='30' value={input.life_span} name='life_span' onChange={(e) => handleChange(e)}/>
-                    {errors.life_span && (<p className='error'>{errors.life_span}</p>)}
-                </div>
-                <div>
                     <label>Origin:</label>
                     <input type='text' value={input.origin} name='origin' onChange={(e) => handleChange(e)}/>
                     {errors.origin && (<p className='error'>{errors.origin}</p>)}
@@ -137,6 +133,12 @@ export default function DogForm({}){
                     {errors.image && (<p className='error'>{errors.image}</p>)}
                 </div>
                 <div>
+                    <label>Life span:</label>
+                    <input type='number' min='1' max='30' value={input.life_span} name='life_span' onChange={(e) => handleChange(e)}/>
+                    {errors.life_span && (<p className='error'>{errors.life_span}</p>)}
+                </div>
+                <button className={style.button2} type='submit' onClick={(e) => handleSubmit(e)}>Create</button>
+                <div className={style.temps}>
                     <select onChange={handleSelect}>
                         {temps.map((e) => (
                             <option key={e.name} value={e.name} onChange={handleSelect}>{e.name}</option>
@@ -153,7 +155,6 @@ export default function DogForm({}){
                         </ul>
                     </div>
                 </div>
-                <button type='submit' onClick={(e) => handleSubmit(e)}>Create</button>
             </form>
         </div>
     )
